@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "ionic webpack starter",
   "scripts": {
+    "install" : "npm install",
     "start" : "node  ./server/bin/www"
   },
   "cordovaPlugins": [
@@ -48,7 +49,7 @@
     "debug": "~2.1.1",
     "express": "~4.11.1",
     "jade": "~1.9.1",
-    "mongoose": "^4.0.3",
+    "mongoose": "^4.0.3", 
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0",
     "ejs":"2.0.0"
