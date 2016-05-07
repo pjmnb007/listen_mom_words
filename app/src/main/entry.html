@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>{%= o.htmlWebpackPlugin.options.title || 'Webpack App'%}</title>
+   <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+    {% } %}
+    <script src="cordova.js"></script>
+    <!-- {%= ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
+  </body>
+</html>
